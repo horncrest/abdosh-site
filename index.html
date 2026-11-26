@@ -3,48 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abdosh International</title>
-<meta name="description" content="Abdosh International. Our new website is coming soon. Contact us at info@abdosh.com.">
+<title>Abdosh International | Coming soon</title>
+<meta name="description" content="Abdosh International. Our new website is coming soon. For enquiries, email info@abdosh.com.">
 <meta name="robots" content="index,follow">
+<link rel="canonical" href="https://abdosh.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Abdosh International">
+<meta property="og:title" content="Abdosh International | Coming soon">
+<meta property="og:description" content="Our new website is coming soon. For enquiries, email info@abdosh.com.">
+<meta property="og:url" content="https://abdosh.com/">
+<meta property="og:image" content="https://abdosh.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5aa31a">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-  :root { --green: #5aa31a; --ink: #1f2a1a; --muted: #6b7466; --bg: #f7f8f5; }
+  :root {
+    --green: #5aa31a; --green-dark: #478214; --ink: #1c2418; --muted: #68715f;
+    --bg: #f6f8f3; --card: #ffffff; --line: #e1e6db;
+  }
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--ink); background: var(--bg);
+    background-image: radial-gradient(1100px 600px at 50% -200px, rgba(90,163,26,.14), transparent 70%);
     display: flex; flex-direction: column; min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
   }
-  main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 48px 24px; }
-  .card { max-width: 560px; width: 100%; text-align: center; }
-  .mark { display: inline-flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
-  .mark .name { font-size: clamp(30px, 6vw, 44px); font-weight: 800; letter-spacing: .5px; color: var(--green); }
-  .mark .tail { font-size: clamp(22px, 4.5vw, 32px); font-weight: 300; color: var(--muted); }
-  .rule { height: 3px; width: 72px; background: var(--green); margin: 18px auto 28px; border-radius: 2px; }
-  h1 { font-size: clamp(20px, 3.5vw, 26px); font-weight: 600; margin: 0 0 12px; }
-  p { font-size: 17px; line-height: 1.55; color: var(--muted); margin: 0 0 22px; }
-  .contact { display: inline-block; background: #fff; border: 1px solid #e3e7df; border-radius: 12px; padding: 16px 22px; }
-  .contact span { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 6px; }
-  .contact a { font-size: 19px; font-weight: 600; color: var(--green); text-decoration: none; }
-  .contact a:hover { text-decoration: underline; }
-  footer { text-align: center; padding: 20px; font-size: 13px; color: var(--muted); }
+  main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 56px 24px; }
+  .card { max-width: 600px; width: 100%; text-align: center; }
+  .mark { display: inline-flex; align-items: baseline; gap: 10px; margin-bottom: 6px; white-space: nowrap; }
+  .mark .name { font-size: clamp(32px, 7vw, 50px); font-weight: 800; letter-spacing: .5px; color: var(--green); line-height: 1; }
+  .mark .tail { font-size: clamp(22px, 5vw, 36px); font-weight: 300; color: var(--muted); line-height: 1; }
+  .rule { height: 3px; width: 72px; background: var(--green); margin: 22px auto 30px; border-radius: 2px; }
+  h1 { font-size: clamp(22px, 4vw, 30px); font-weight: 600; margin: 0 0 12px; letter-spacing: -.01em; }
+  p.lead { font-size: 17px; line-height: 1.6; color: var(--muted); margin: 0 auto 28px; max-width: 460px; }
+  .contact {
+    display: inline-block; background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 26px; box-shadow: 0 10px 30px rgba(28,36,24,.06);
+  }
+  .contact span { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); margin-bottom: 8px; }
+  .contact a { font-size: clamp(18px, 3.6vw, 21px); font-weight: 600; color: var(--green-dark); text-decoration: none; word-break: break-all; }
+  .contact a:hover, .contact a:focus-visible { text-decoration: underline; outline: none; }
+  footer { text-align: center; padding: 22px; font-size: 13px; color: var(--muted); }
+  @media (prefers-reduced-motion: no-preference) {
+    .card { animation: rise .6s ease-out both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  }
 </style>
 </head>
 <body>
 <main>
   <div class="card">
-    <div class="mark"><span class="name">ABDOSH</span><span class="tail">International</span></div>
+    <div class="mark" aria-label="Abdosh International"><span class="name">ABDOSH</span><span class="tail">International</span></div>
     <div class="rule"></div>
     <h1>Our new website is coming soon</h1>
-    <p>We are working on a new abdosh.com. In the meantime, please get in touch by email.</p>
+    <p class="lead">We are working on a new abdosh.com. In the meantime, please get in touch by email and we will be glad to help.</p>
     <div class="contact">
-      <span>Enquiries</span>
+      <span>For enquiries</span>
       <a href="mailto:info@abdosh.com">info@abdosh.com</a>
     </div>
   </div>
 </main>
-<footer>&copy; <span id="y"></span> Abdosh International</footer>
+<footer>&copy; <span id="y">2026</span> Abdosh International</footer>
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
